@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: url(images/Loginpage.jpg) no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .mos-burger {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        font-size: 120px;
+        color: #ffa500;
+        letter-spacing: 4px;
+        margin-left: 3cm;
+      }
+
+      .mos-subtitle {
+        position: absolute;
+        top: 160px;
+        left: 30px;
+        font-weight: bold;
+        font-family: "Arial", sans-serif;
+        font-size: 36px;
+        margin-top: 1cm;
+        margin-left: 8cm;
+        color: #fdfcfb;
+        text-shadow: 3px 3px 5px rgb(255, 117, 12);
+      }
+
+      .login-container {
+        background-color: rgba(88, 132, 41, 0.427);
+        padding: 60px;
+        width: 600px;
+        height: 700px;
+        max-width: 90%;
+        border-radius: 15px;
+        margin-right: 3cm;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5cm;
+      }
+
+      h2 {
+        color: white;
+        margin-bottom: 30px;
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 2cm;
+        margin-top: 3cm;
+      }
+
+      .form-control {
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.99);
+        color: black;
+        font-size: 18px;
+        height: 50px;
+      }
+      .xx {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 0.5cm;
+      }
+
+      .xxx {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 0.8cm;
+      }
+
+      .login-container .btn-custom {
+        width: 40%;
+        border-radius: 25px;
+        background-color: #ff7300;
+        border: none;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .btn-custom:hover {
+        background-color: #f7994b;
+      }
+      .btn-custom {
+        background-color: #ff7300;
+      }
+
+      label {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+      }
+
+      p {
+        color: aliceblue;
+        font-weight: bold;
+      }
+
+      .category-btn {
+        display: none;
+      }
+      .login-container {
+        background-color: rgba(88, 132, 41, 0.427);
+        padding: 60px;
+        width: 600px;
+        height: 700px;
+        max-width: 90%;
+        border-radius: 15px;
+        margin-right: 3cm;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5cm;
+      }
+
+      .forgot-password-container {
+        display: none;
+        background-color: rgba(88, 132, 41, 0.427);
+        color: #fdfcfb;
+        padding: 60px;
+        height: 700px;
+        width: 600px;
+        flex-direction: column;
+        margin-right: 3cm;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+      }
+
+      .otp-container,
+      .reset-password-container {
+        display: none;
+      }
+
+      .register-container {
+        display: none;
+        color: #fdfcfb;
+        background-color: rgba(88, 132, 41, 0.427);
+        padding: 60px;
+        margin-right: 3cm;
+        height: 700px;
+        width: 600px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Heading -->
+    <div class="mos-burger">Moss Burger</div>
+
+    <!-- Sub Headingg -->
+    <div class="mos-subtitle">Fresh & Tasty</div>
+
+    <!-- Login -->
+    <div class="login-container" id="loginForm">
+      <h2 class="text-center">Login</h2>
+      <form>
+        <div class="form-outline mb-4">
+          <input type="email" id="email" class="form-control" required />
+          <label class="form-label" for="email">Email address</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input type="password" id="password" class="form-control" required />
+          <label class="form-label" for="password">Password</label>
+        </div>
+
+        <!-- Remember me and forgot password links -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="rememberMe"
+                checked
+              />
+              <label class="form-check-label" for="rememberMe">
+                Remember me
+              </label>
+            </div>
+          </div>
+
+          <div class="col">
+            <a href="javascript:void(0);" id="forgotPasswordLink" class="xx"
+              >Forgot password?</a
+            >
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-custom mb-4">Sign in</button>
+
+        <div class="text-center">
+          <p>
+            Not a member?
+            <a href="javascript:void(0);" id="registerLink" class="xxx"
+              >Register</a
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Forgot Password -->
+    <div class="forgot-password-container">
+      <h3>Forgot Password</h3>
+      <form>
+        <div class="form-outline mb-4">
+          <input
+            type="email"
+            id="forgotEmail"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button type="button" class="btn btn-custom" id="sendOtpBtn">
+          Send OTP
+        </button>
+      </form>
+
+      <div class="otp-container">
+        <h4>Enter OTP</h4>
+        <div class="form-outline mb-4">
+          <input
+            type="text"
+            id="otpInput"
+            class="form-control"
+            placeholder="Enter OTP"
+            required
+          />
+        </div>
+        <button type="button" class="btn btn-custom" id="verifyOtpBtn">
+          Verify OTP
+        </button>
+      </div>
+
+      <div class="reset-password-container">
+        <h4>Reset Password</h4>
+        <div class="form-outline mb-4">
+          <input
+            type="password"
+            id="newPassword"
+            class="form-control"
+            placeholder="Enter new password"
+            required
+          />
+        </div>
+        <button type="button" class="btn btn-custom" id="resetPasswordBtn">
+          Reset Password
+        </button>
+      </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="register-container">
+      <h3>Register</h3>
+      <form id="registerForm">
+        <!-- Name  -->
+        <div class="form-outline mb-4">
+          <input type="text" id="formFullName" class="form-control" />
+          <label class="form-label" for="formFullName">Full Name</label>
+        </div>
+
+        <!-- Email  -->
+        <div class="form-outline mb-4">
+          <input type="email" id="formEmail" class="form-control" />
+          <label class="form-label" for="formEmail">Email address</label>
+        </div>
+
+        <!-- Password  -->
+        <div class="form-outline mb-4">
+          <input type="password" id="formPassword" class="form-control" />
+          <label class="form-label" for="formPassword">Password</label>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-outline mb-4">
+          <input
+            type="password"
+            id="formConfirmPassword"
+            class="form-control"
+          />
+          <label class="form-label" for="formConfirmPassword"
+            >Confirm Password</label
+          >
+        </div>
+
+        <button type="button" class="btn btn-custom mb-4" id="registerBtn">
+          Register
+        </button>
+      </form>
+    </div>
+
+    <script src="jscript/app.js"></script>
+  </body>
+</html>
