@@ -9,8 +9,6 @@ async function refreshTable() {
   getAllItems();
 }
 
-
-// Function to clear input fields
 function clearFields() {
   document.getElementById("itemId").value = "";
   document.getElementById("itemno").value = "";
@@ -21,11 +19,8 @@ function clearFields() {
   document.getElementById("currentImageUrl").value = "";
 }
 
-// Function to refresh table (implementation needed)
-
 async function refreshTable() {
   console.log("Refreshing table...");
-  // Implement fetching and updating table data from backend
 }
 
 function deleteItem() {
@@ -160,17 +155,15 @@ async function uploadImage(imageFile) {
       body: formData,
     });
 
-    // Check if the response was successful
     if (!response.ok) {
       throw new Error(`Failed to upload image: ${response.statusText}`);
     }
 
-    // Return the response text or JSON (depending on your API response)
-    const imageUrl= await response.text();
-    return `http://localhost:8080${imageUrl}`; // or await response.json() if the API returns JSON
+    const imageUrl = await response.text();
+    return `http://localhost:8080${imageUrl}`;
   } catch (error) {
     console.error("Error uploading image:", error);
-    throw error; // Re-throw error for handling outside the function
+    throw error;
   }
 }
 
@@ -215,7 +208,7 @@ async function addItem() {
         text: "The item was successfully Added.",
       });
       clearFields();
-          refreshTable();
+      refreshTable();
     })
     .catch((error) => console.error(error));
 }
@@ -237,9 +230,9 @@ async function updateItem() {
     return;
   }
 
-  let imageUrl = document.getElementById("image").value; // Use existing image URL
+  let imageUrl = document.getElementById("image").value;
   if (image) {
-    imageUrl = await uploadImage(image); // Upload new image
+    imageUrl = await uploadImage(image);
   }
 
   const myHeaders = new Headers();
@@ -251,7 +244,7 @@ async function updateItem() {
     itemType: itemtype,
     name: name,
     price: price,
-    imageUrl: imageUrl, // Corrected image URL
+    imageUrl: imageUrl,
   });
 
   const requestOptions = {
@@ -262,7 +255,10 @@ async function updateItem() {
   };
 
   try {
-    const response = await fetch("http://localhost:8080/item/update", requestOptions);
+    const response = await fetch(
+      "http://localhost:8080/item/update",
+      requestOptions
+    );
     const result = await response.text();
     console.log(result);
 
@@ -273,10 +269,8 @@ async function updateItem() {
     });
 
     clearFields();
-    
-    // ✅ Now you can use await here
-    await refreshTable(); 
 
+    await refreshTable();
   } catch (error) {
     console.error(error);
     Swal.fire({

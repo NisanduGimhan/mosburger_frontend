@@ -232,7 +232,7 @@ function searchCustomer() {
   const tableRows = document.querySelectorAll("#customerTable tbody tr");
 
   tableRows.forEach((row) => {
-    const name = row.cells[1].innerText.toLowerCase(); 
+    const name = row.cells[1].innerText.toLowerCase();
     if (name.includes(searchInput)) {
       row.style.display = "";
     } else {
@@ -240,4 +240,3 @@ function searchCustomer() {
     }
   });
 }
-

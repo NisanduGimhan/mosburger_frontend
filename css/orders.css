@@ -24,47 +24,30 @@ body {
 .table-hover tbody tr:hover {
     background-color: #f1f1f1; 
 }
-#left-buttons {
-    flex: 1; 
-    display: flex; 
-    justify-content: center; 
+ header {
+    background-color: #343a40;
+    color: white;
+    display: flex;
     align-items: center;
-    width: 80px; 
-    height: 50px; 
-    position: absolute; 
-    left: 10px; 
-    top: 5%; 
-    transform: translateY(-50%); 
-    background-color: #fb7609; 
-    color: white; 
-    border: none; 
-    border-radius: 8px; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-}
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
 
-#left-buttons .icon {
-    width: 60px; 
-    height: 50px; 
-    margin-right: 8px; 
-}
+  .left-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-#left-buttons .nav-link {
-    color: white; 
-    text-decoration: none; 
-    font-size: 14px; 
-}
-
-
-#left-buttons:hover {
-    background-color: #fb7908; /
-}
-
-
-#left-buttons:focus {
-    outline: none; 
-    box-shadow: 0 0 10px rgba(232, 53, 3, 0.963); 
-}
+  .left-button img {
+    width: 90px;
+    height: 90px;
+  }
 
 .table th {
     background-color: #343a40; 
