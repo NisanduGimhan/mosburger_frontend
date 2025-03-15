@@ -1,0 +1,108 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: url('images/Loginpage.jpg');  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: #f5f5f5; 
+    margin: 0; 
+    height: 100vh; 
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9ecef; 
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1; 
+}
+#left-buttons {
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 80px; 
+    height: 50px; 
+    position: absolute; 
+    left: 10px; 
+    top: 5%; 
+    transform: translateY(-50%); 
+    background-color: #fb7609; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+#left-buttons .icon {
+    width: 60px; 
+    height: 50px; 
+    margin-right: 8px; 
+}
+
+#left-buttons .nav-link {
+    color: white; 
+    text-decoration: none; 
+    font-size: 14px; 
+}
+
+
+#left-buttons:hover {
+    background-color: #fb7908; /
+}
+
+
+#left-buttons:focus {
+    outline: none; 
+    box-shadow: 0 0 10px rgba(232, 53, 3, 0.963); 
+}
+
+.table th {
+    background-color: #343a40; 
+    color: white; 
+}
+
+.table td, .table th {
+    vertical-align: middle; 
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.btn-add-item {
+    margin-top: auto;
+}
+
+.cart-item {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cart-item input {
+    width: 60px;
+}
+
+.btn-remove {
+    margin-left: 1rem;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .cart-item input {
+        width: 40px;
+    }
+}

@@ -1,0 +1,281 @@
+/* Center the container vertically and horizontally */
+body {
+    background: linear-gradient(135deg, rgb(243, 191, 138), rgba(255, 255, 255, 0.39), rgba(233, 241, 186, 0.39));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+h1,
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+} label {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 2090px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Flexbox layout for the form and table */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between columns */
+}
+
+/* Ensure columns take equal space on larger screens */
+.col-md-6 {
+    flex: 1;
+    min-width: 300px; /* Minimum width for smaller screens */
+}
+
+/* Header styling */
+header {
+    background-color: #343a40;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Left button styling */
+.left-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-button img {
+    width: 90px;
+    height: 90px;
+}
+
+/* Table wrapper for scrollable table */
+.table-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Sticky table header */
+.table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #060605;
+    color: white;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        flex: 1 1 100%;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #141310;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0dff9e;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    
+
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+}
+btn-add{
+
+    background: #e74302;
+}
+table th,
+table td {
+    
+    padding: 15px;
+    font-size: 16px;
+}
+
+thead {
+    background-color: #e0e0e0;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+.table-wrapper {
+    
+    max-height: 400px; 
+    overflow-y: auto; 
+    margin-bottom: 20px;
+}
+.table thead th {
+    
+    position: sticky;
+    top: 0; 
+    z-index: 2; 
+    background-color: #000000;
+    color: white; 
+    padding: 10px;
+    border-bottom: 2px solid #ccc; 
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.customer-image, .item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Left button styling */
+.left-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left-button img {
+    width: 90px;
+    height: 90px;
+  }
+
+.actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+@media screen and (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .form-group input, .form-group select {
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    button {
+        padding: 6px 10px;
+    }
+
+    .actions button {
+        margin-bottom: 5px;
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+}

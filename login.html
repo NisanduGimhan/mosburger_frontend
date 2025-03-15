@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    body {
+      background: url(images/Loginpage.jpg) no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      width: 350px;
+      margin-right: 100px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      border-radius: 25px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+    }
+
+    .btn-custom {
+      width: 40%;
+      border-radius: 25px;
+      background-color: #f0d400;
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .btn-custom:hover {
+      background-color: #d48800;
+    }
+
+    label {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2 class="text-center">Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter your username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter your password" required />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-custom">
+          Login
+          <a class="nav-link" href="frontpage.html"> </a>
+        </button>
+      </div>
+      <button class="category-btn" id="left-buttons">
+        <script src="jscript/app.js"></script>
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>
