@@ -1,21 +1,17 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
+    background: linear-gradient(
+      135deg,
+      rgb(243, 191, 138),
+      rgba(255, 255, 255, 0.39),
+      rgba(233, 241, 186, 0.39)
+    );
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-}
-
-body {
-    background-image: url('images/Loginpage.jpg');  
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-color: #f5f5f5; 
-    margin: 0; 
-    height: 100vh; 
-}
+    flex-direction: column;
+  }
 
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #e9ecef; 
