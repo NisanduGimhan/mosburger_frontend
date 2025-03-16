@@ -41,14 +41,12 @@ function displayOrders(orders) {
       <td>Rs. ${order.discount.toFixed(2)}</td>
       <td>Rs. ${order.totalPrice.toFixed(2)}</td>
       <td>
-        <button class="btn btn-sm" style="background-color: #e27324cc;" onclick="printOrderReport(${
-          order.id
-        })">
+        <button class="btn btn-sm" style="background-color: #e27324cc;" onclick="printOrderReport(${order.id
+      })">
           Print Order Report
         </button>
-        <button class="btn btn-danger btn-sm" onclick="deleteOrder(${
-          order.id
-        })">
+        <button class="btn btn-danger btn-sm" onclick="deleteOrder(${order.id
+      })">
           Delete
         </button>
       </td>

@@ -31,10 +31,12 @@ window.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => response.text())
         .then((message) => {
-          alert(message);
-          console.log("Redirecting to frontpage...");
+          Swal.fire({
+            title: "Login successful! 🎉",
+            icon: "success",
+          });
+
           if (message === "Login successful!") {
-            console.log("Redirecting to frontpage...");
             window.location.href = "http://127.0.0.1:5501/frontpage.html";
           }
         })
@@ -63,17 +65,28 @@ window.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.text())
         .then((result) => {
           console.log(result);
-          alert(result);
+          Swal.fire({
+            title: "OTP Sent 📧 ",
+            icon: "success",
+          });
           if (result === "OTP sent!") {
             document.querySelector(".otp-container").style.display = "block";
           }
         })
         .catch((error) => {
           console.error("Error:", error);
-          alert("Failed to send OTP. Please try again.");
+          Swal.fire({
+            icon: "error",
+            title: "Oops!",
+            text: "Failed to send OTP. Please try again",
+          });
         });
     } else {
-      alert("Please enter a valid email.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops!",
+        text: "Please Enter Valid Email",
+      });
     }
   });
 
@@ -89,7 +102,10 @@ window.addEventListener("DOMContentLoaded", function () {
         })
           .then((response) => response.text())
           .then((message) => {
-            alert(message);
+            Swal.fire({
+              title: "OTP Verified! 🎊 ",
+              icon: "success",
+            });
             if (message === "OTP Verified!") {
               document.querySelector(
                 ".reset-password-container"
@@ -98,7 +114,11 @@ window.addEventListener("DOMContentLoaded", function () {
           })
           .catch((error) => {
             console.error("Error:", error);
-            alert("OTP verification failed. Please try again.");
+            Swal.fire({
+              icon: "error",
+              title: "Oops!",
+              text: "OTP verification failed. Please try again.",
+            });
           });
       } else {
         alert("Please enter the OTP.");
@@ -117,14 +137,21 @@ window.addEventListener("DOMContentLoaded", function () {
         })
           .then((response) => response.text())
           .then((message) => {
-            alert(message);
+            Swal.fire({
+              title: "Password reset successfully! 🎊 ",
+              icon: "success",
+            });
             if (message === "Password reset successfully!") {
               location.reload();
             }
           })
           .catch((error) => {
             console.error("Error:", error);
-            alert("Password reset failed. Please try again.");
+            Swal.fire({
+              icon: "error",
+              title: "Oops!",
+              text: "Password reset failed. Please try again..",
+            });
           });
       } else {
         alert("Please enter a new password.");
@@ -142,7 +169,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (fullName && email && password && confirmPassword) {
       if (password !== confirmPassword) {
-        alert("Passwords do not match.");
+        Swal.fire({
+          icon: "error",
+          title: "Oops!",
+          text: "Password not match",
+        });
         return;
       }
 
@@ -168,7 +199,11 @@ window.addEventListener("DOMContentLoaded", function () {
         })
         .catch((error) => {
           console.error("Error:", error);
-          alert("Registration failed. Please try again.");
+          Swal.fire({
+            icon: "error",
+            title: "Oops!",
+            text: "Registration failed. Please try again.",
+          });
         });
     } else {
       alert("Please fill all fields.");

@@ -152,12 +152,11 @@ function renderCart() {
     cartItem.classList.add("cart-item");
     cartItem.innerHTML = `
             <span>${item.name} - Rs.${item.price}</span>
-            <input type="number" value="${
-              item.quantity
-            }" min="1" onchange="updateQuantity(${index}, this.value)">
+            <input type="number" value="${item.quantity
+      }" min="1" onchange="updateQuantity(${index}, this.value)">
             <span>Rs.${(parseFloat(item.price) * item.quantity).toFixed(
-              2
-            )}</span>
+        2
+      )}</span>
             <button class="btn btn-danger btn-remove" onclick="removeFromCart(${index})">Remove</button>
         `;
     cartItems.appendChild(cartItem);
